@@ -1,0 +1,6 @@
+{
+  "name": "共鳴マップ",
+  "description": "楽曲再生中に「心が動いた歌詞」を直感的にタップして繋がる、歌詞同期型インタラクティブ・音楽プレイヤー。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

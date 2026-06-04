@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", "Inter", sans-serif;
+  --font-display: "Orbitron", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-miku: #39C5BB;
+  --color-miku-dark: #208781;
+  --color-pink-vocal: #ec4899;
+}
+
+/* Custom visual effects and breathing animations */
+@keyframes pulseBpm {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(57, 197, 187, 0.2);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(57, 197, 187, 0.45);
+  }
+}
+
+@keyframes beatLogo {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 8px rgba(57, 197, 187, 0.5));
+  }
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 20px rgba(57, 197, 187, 0.8));
+  }
+}
+
+@keyframes floatHeart {
+  0% {
+    transform: translateY(0) scale(0.8) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) scale(1.2) rotate(15deg);
+    opacity: 0;
+  }
+}
+
+.animate-pulse-bpm {
+  animation: pulseBpm var(--bpm-duration, 1s) infinite ease-in-out;
+}
+
+.animate-beat-logo {
+  animation: beatLogo 0.8s infinite ease-in-out;
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(24, 24, 27, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(57, 197, 187, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(57, 197, 187, 0.6);
+}
+
+body {
+  background-color: #030712;
+  color: #f3f4f6;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
